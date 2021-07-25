@@ -1,0 +1,40 @@
+<div class="container">
+<div *ngIf='isLoad == true' class="row">
+<div class="col-md-9 movie-main">
+<img class="w-100"  [src]="imgD+movieDetails.backdrop_path"> 
+<div class="Ribbon">{{movieDetails.vote_average}}</div>
+<div class="moviedetails">
+
+<h3 class="p-3"> {{movieDetails.original_title}}   </h3>
+<p class="lead">{{movieDetails.overview}}     </p> 
+<h2>Production Companies</h2>
+<div class="row">
+<div *ngFor="let company of production_companies" class="col-md-4 companies">
+<h4>{{company.name}}</h4>
+<img class="w-100" [src]="company.logo_path == null ? imgD+'IuAlhI9eVC9Z8UQWOIDdWRKSEJ.png' : imgD+company.logo_path">
+</div>
+</div> 
+<h3 class="home-page">HOME PAGE </h3>
+<a [href]="movieDetails.homepage" target="_blank">
+<div class="movie-link">
+<i class="fas fa-play"></i>
+<img  [src]="imgD+movieDetails.poster_path">    
+</div>
+</a>
+</div>
+</div>
+
+
+<div class="col-md-3">
+<div *ngFor='let movie of topTen' class="movie-item">
+<div class="Ribbon">{{movie.vote_average}}</div>
+<a [routerLink] = "['/moviedetails',movie.id]">
+<img class="w-100" [src]="imgD+movie.poster_path">    
+<h5 style="color: burlywood;">{{movie.title}}</h5>
+
+</a>   
+</div>
+</div>
+
+</div>
+</div>

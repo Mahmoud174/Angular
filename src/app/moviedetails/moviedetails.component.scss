@@ -1,0 +1,92 @@
+.moviedetails h3 
+{
+    color: #abc7e0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+} 
+
+
+.moviedetails p 
+{
+    color: #878989;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.moviedetails h2 
+{
+    padding: 10px;
+    color: #878989;
+    font-family: fantasy;
+
+
+}
+.movie-main
+{
+    position: relative;
+    border: 1px solid #1f252e;
+    box-shadow: 0 0 20px #00000078;
+    overflow: hidden;
+}
+.movie-link
+{
+    height: 650px;
+    padding-top: 35px;
+    position: relative;
+}
+.home-page 
+{
+    color: #073f04;
+    background-color: #a3eeba;
+    padding: 10px 10px ;
+    margin: 20px 0px;
+}
+.movie-link i 
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #fa0707;
+    font-size: -webkit-xxx-large;
+    
+}
+.movie-link img 
+{
+    height: 100%;
+    width: 100%;
+}
+.Ribbon
+{
+    position: absolute;
+    top: 23px;
+    left: -61px;
+    width: 200px;
+    height: 30px;
+    background: #f5c518;
+    text-align: center;
+    font-size: 12px;
+    line-height: 30px;
+    color: #272727;
+    -webkit-transform: rotate(
+-45deg
+);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(
+-45deg
+);
+    font-weight: bold;
+    -webkit-transition: .4s all ease;
+    -o-transition: .4s all ease;
+    transition: .4s all ease;
+}
+.movie-item
+{
+    position: relative;
+    border: 1px solid #1f252e;
+    box-shadow: 0 0 20px #00000078;
+    overflow: hidden;
+}
+.companies h4
+{
+    color: aquamarine;
+    padding: 7px;
+    font-weight: 800;
+   
+}

@@ -1,0 +1,33 @@
+<div class="container-fluid movie-W">
+<div class="row">
+<div class="col-md-4 py-5">
+<div class="brdr w-25"></div> 
+<input [(ngModel)]="searchText" placeholder="search" class="form-control mr-sm-2">
+<h2 class="text-white py-4"> Popular Moives<br>Right now</h2>
+<p class="text-muted"> Most Trending Moives this Month</p>    
+<div class="brdr"></div>    
+</div>        
+<div *ngFor="let movie of pageOfItems|search:searchText" class="col-md-2 my-2">
+<a [routerLink] = "['/moviedetails',movie.id]" style="text-decoration: none;">
+<div class="movie-card">
+<img class="img-fluid" src="https://image.tmdb.org/t/p/original{{movie.poster_path}}">
+<div class="movie-info text-white py-5 px-2">
+
+<h4 style="font-weight: bold;">{{movie.title}}</h4>
+<i *ngFor="let star of movie.stars_avg" class="fa fa-star"></i> 
+<p>{{movie.overview|seemore:60}}</p>
+<span style="color: beige; background-color: cadetblue;">..see more</span>
+<span class="aver">{{movie.vote_average}}</span>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="w-50 mx-auto py-5  d-flex">
+<i class="fas text-white fa-2x fas fa-arrow-alt-circle-left py-4" (click)="prev()"></i>
+<div class="text-white p-4" *ngFor="let pageNumber of pageNumbers;let i = index" (click)="isSelected(pageNumber-1)" [ngClass]="{'active': select== pageNumber-1}" (click)="changePage(pageNumber)">{{pageNumber}}</div>
+<i class="fas text-white fa-2x fas fa-arrow-alt-circle-right py-4" (click)="next()"></i>
+</div>
+</div>
+
+
